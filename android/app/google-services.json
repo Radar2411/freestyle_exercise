@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671398652445",
+    "project_id": "cpmad-project-9fc8c",
+    "storage_bucket": "cpmad-project-9fc8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671398652445:android:c466136bcb5317243174f4",
+        "android_client_info": {
+          "package_name": "com.example.freestyle_exercise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671398652445-6a88e8qabd7l9cm3ccatkef6icmhridj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCsjlha6XjlIUKFGZBdG6lepOrfZlG2hs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671398652445-6a88e8qabd7l9cm3ccatkef6icmhridj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:freestyle_exercise/pages/addExercise.dart';
 import 'package:freestyle_exercise/pages/profile.dart';
+import 'package:freestyle_exercise/pages/showOwnExercise.dart';
 import 'package:freestyle_exercise/pages/welcome.dart';
 import 'package:freestyle_exercise/screens/home_page.dart';
 import 'package:freestyle_exercise/screens/login_page.dart';
@@ -50,6 +51,7 @@ class _MyAppState extends State<MyApp> {
         '/home': (context) => HomePage(),
         '/welcome': (context) => Welcome(),
         'addexercise': (context) => AddExercise(),
+        'recordspage': (context) => RecordsPage(),
         '/profile': (context) => Profile(),
       },
       home:

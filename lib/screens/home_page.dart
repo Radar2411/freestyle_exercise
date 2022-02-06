@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freestyle_exercise/pages/showOwnExercise.dart';
 import 'package:freestyle_exercise/services/firebaseauth_service.dart';
 import 'package:freestyle_exercise/pages/welcome.dart';
 import 'package:freestyle_exercise/pages/addExercise.dart';
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    _listPages..add(Welcome())..add(AddExercise())..add(Profile());
+    _listPages..add(Welcome())..add(RecordsPage())..add(Profile());
   }
 
   @override

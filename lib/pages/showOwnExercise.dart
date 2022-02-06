@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freestyle_exercise/model/ownExercise.dart';
+import 'package:freestyle_exercise/pages/addExercise.dart';
 
 import 'package:freestyle_exercise/services/firestore_service.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -15,6 +16,16 @@ class _RecordsPageState extends State<RecordsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Own Exercises'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            color: Colors.white,
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => AddExercise()));
+            },
+          ),
+        ],
       ),
       body: FutureBuilder<List<OwnExercise>>(
         future: FirestoreService().readOwnExerciseData(),

@@ -18,7 +18,7 @@ class _RecordsPageState extends State<RecordsPage> {
         title: Text('Own Exercises'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.add),
+            icon: Icon(Icons.add_box),
             color: Colors.white,
             onPressed: () {
               Navigator.of(context)
@@ -46,12 +46,12 @@ class _RecordsPageState extends State<RecordsPage> {
                       Column(
                         children: [
                           Text(
-                            snapshot.data[index].duration,
+                            "Duration: " + snapshot.data[index].duration,
                             style:
                                 TextStyle(color: Colors.black, fontSize: 14.0),
                           ),
                           Text(
-                            snapshot.data[index].noOfReps,
+                            "No. of Reps: " + snapshot.data[index].noOfReps,
                             style:
                                 TextStyle(color: Colors.black, fontSize: 12.0),
                           ),
@@ -77,6 +77,28 @@ class _RecordsPageState extends State<RecordsPage> {
             );
           } else if (snapshot.hasError) {
             return Text("${snapshot.error}");
+          } else {
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Add your own exercises here.",
+                    style: TextStyle(fontSize: 30)),
+                SizedBox(height: 80),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.add_box),
+                        iconSize: 60,
+                        tooltip: 'add exercise',
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => AddExercise()));
+                        },
+                      ),
+                    ]),
+              ],
+            );
           }
           return Container(
             alignment: AlignmentDirectional.center,

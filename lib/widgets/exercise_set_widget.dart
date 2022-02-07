@@ -1,5 +1,5 @@
 import 'package:freestyle_exercise/model/exercise_set.dart';
-import 'package:freestyle_exercise/pages/exercise_page.dart';
+import 'package:freestyle_exercise/pages/exerciseVideos.dart';
 import 'package:flutter/material.dart';
 
 class ExerciseSetWidget extends StatelessWidget {

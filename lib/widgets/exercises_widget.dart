@@ -16,11 +16,17 @@ class _ExercisesWidgetState extends State<ExercisesWidget> {
   Widget build(BuildContext context) => SliverPadding(
         padding: const EdgeInsets.all(16),
         sliver: SliverList(
+          // gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          //   crossAxisCount: 2,
+          //   mainAxisSpacing: 10.0,
+          //   crossAxisSpacing: 10.0,
+          //   childAspectRatio: 4.0,
+          // ),
           delegate: SliverChildListDelegate(
             [
               SizedBox(height: 8),
               Text(
-                'Exercise',
+                'Exercises',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               ),
               SizedBox(height: 8),

@@ -36,41 +36,55 @@ class _RecordsPageState extends State<RecordsPage> {
               itemBuilder: (context, index) {
                 return Card(
                   elevation: 5,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        snapshot.data[index].exerciseTitle,
-                        style: TextStyle(color: Colors.blue, fontSize: 16.0),
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Duration: " + snapshot.data[index].duration,
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 14.0),
-                          ),
-                          Text(
-                            "No. of Reps: " + snapshot.data[index].noOfReps,
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 12.0),
-                          ),
-                        ],
-                      ),
-                      IconButton(
-                        color: Colors.blue,
-                        icon: Icon(Icons.delete),
-                        onPressed: () async {
-                          setState(() {
-                            FirestoreService().deleteOwnExerciseData(
-                                snapshot.data[index].uid);
-                          });
-                          Fluttertoast.showToast(
-                              msg: "Data deleted successfully",
-                              gravity: ToastGravity.TOP);
-                        },
-                      )
-                    ],
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          snapshot.data[index].exerciseTitle,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 20),
+                        ),
+                        SizedBox(height: 10),
+                        Text("Duration: " +
+                            snapshot.data[index].duration +
+                            " No. of Reps: " +
+                            snapshot.data[index].noOfReps),
+                        // Column(
+                        //   children: [
+                        //     Text(
+                        //       "Duration: " + snapshot.data[index].duration,
+                        //       style: TextStyle(
+                        //           color: Colors.black, fontSize: 14.0),
+                        //     ),
+                        //     Text(
+                        //       "No. of Reps: " + snapshot.data[index].noOfReps,
+                        //       style: TextStyle(
+                        //           color: Colors.black, fontSize: 12.0),
+                        //     ),
+                        //   ],
+                        // ),
+                        IconButton(
+                          color: Colors.blue,
+                          icon: Icon(Icons.delete),
+                          onPressed: () async {
+                            setState(() {
+                              FirestoreService().deleteOwnExerciseData(
+                                  snapshot.data[index].uid);
+                            });
+                            Fluttertoast.showToast(
+                                msg: "Data deleted successfully",
+                                gravity: ToastGravity.TOP);
+                          },
+                        )
+                      ],
+                    ),
                   ),
                 );
               },

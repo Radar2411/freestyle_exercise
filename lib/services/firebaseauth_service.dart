@@ -47,6 +47,6 @@ class FirebaseAuthService {
 
   //GET CURRENT USER
   Future getCurrentUser() async {
-    return _fbAuth.currentUser;
+    return await _fbAuth.currentUser;
   }
 } //FirebaseAuthService

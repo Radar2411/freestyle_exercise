@@ -15,13 +15,6 @@ class _ProfileState extends State<Profile> {
         appBar: AppBar(
           title: Text('My Profile'),
           centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.add_box),
-              color: Colors.white,
-              onPressed: () {},
-            ),
-          ],
         ),
         body: SingleChildScrollView(
             child: Container(

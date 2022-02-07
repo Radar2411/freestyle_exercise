@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:freestyle_exercise/pages/addExercise.dart';
+import 'package:freestyle_exercise/pages/addOwnExercise.dart';
 import 'package:freestyle_exercise/pages/profile.dart';
 import 'package:freestyle_exercise/pages/showOwnExercise.dart';
 import 'package:freestyle_exercise/pages/welcome.dart';

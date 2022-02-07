@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freestyle_exercise/model/ownExercise.dart';
-import 'package:freestyle_exercise/pages/addExercise.dart';
+import 'package:freestyle_exercise/pages/addOwnExercise.dart';
 
 import 'package:freestyle_exercise/services/firestore_service.dart';
 import 'package:fluttertoast/fluttertoast.dart';

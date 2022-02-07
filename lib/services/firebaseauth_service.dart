@@ -39,4 +39,14 @@ class FirebaseAuthService {
   Future<void> signOut() async {
     await _fbAuth.signOut();
   } //signOut
+
+  //GET UID
+  Future<String> getCurrentUID() async {
+    return (_fbAuth.currentUser).uid;
+  }
+
+  //GET CURRENT USER
+  Future getCurrentUser() async {
+    return _fbAuth.currentUser;
+  }
 } //FirebaseAuthService

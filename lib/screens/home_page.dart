@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:freestyle_exercise/pages/showOwnExercise.dart';
 import 'package:freestyle_exercise/services/firebaseauth_service.dart';
 import 'package:freestyle_exercise/pages/welcome.dart';
-import 'package:freestyle_exercise/pages/addOwnExercise.dart';
 import 'package:freestyle_exercise/pages/profile.dart';
 
 class HomePage extends StatefulWidget {

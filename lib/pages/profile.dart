@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:freestyle_exercise/services/firebaseauth_service.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,12 +48,31 @@ class Profile extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            "Email: ${user.email}",
-            style: TextStyle(fontSize: 20),
+          padding: const EdgeInsets.all(12.0),
+          child: TextField(
+            controller: nameController..text = user.displayName,
+            decoration: InputDecoration(
+              labelText: "Username:",
+            ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: TextField(
+            controller: emailController..text = user.email,
+            decoration: InputDecoration(
+              labelText: "Email:",
+            ),
+          ),
+        ),
+        RaisedButton(
+          onPressed: () async {
+            await FirebaseAuthService().updateDisplayName(nameController.text);
+            Navigator.pop(context);
+            await FirebaseAuthService().updateEmail(emailController.text);
+          },
+          child: Text("Save Changes"),
+        )
       ],
     );
   }

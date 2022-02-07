@@ -50,8 +50,8 @@ class _MyAppState extends State<MyApp> {
         '/login': (context) => LoginPage(),
         '/home': (context) => HomePage(),
         '/welcome': (context) => Welcome(),
-        'addexercise': (context) => AddExercise(),
-        'recordspage': (context) => RecordsPage(),
+        '/addexercise': (context) => AddExercise(),
+        '/recordspage': (context) => RecordsPage(),
         '/profile': (context) => Profile(),
       },
       home:

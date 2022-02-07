@@ -20,11 +20,12 @@ class FirebaseAuthService {
     }
   } //signIn
 
-  Future<User> signUp({String email, String password}) async {
+  Future<User> signUp({String name, String email, String password}) async {
     try {
       UserCredential ucred = await _fbAuth.createUserWithEmailAndPassword(
           email: email, password: password);
       User user = ucred.user;
+      user.updateProfile(displayName: name);
       print('Signed Up successful! user: $user');
       return user;
     } on FirebaseAuthException catch (e) {
@@ -48,5 +49,23 @@ class FirebaseAuthService {
   //GET CURRENT USER
   Future getCurrentUser() async {
     return await _fbAuth.currentUser;
+  }
+
+  //UPDATE NAME
+  Future<void> updateDisplayName(String displayName) async {
+    var user = await _fbAuth.currentUser;
+
+    user.updateProfile(
+      displayName: displayName,
+    );
+  }
+
+  //UPDATE EMAIL
+  Future<void> updateEmail(String email) async {
+    var user = await _fbAuth.currentUser;
+
+    user.updateEmail(
+      email,
+    );
   }
 } //FirebaseAuthService

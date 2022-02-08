@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freestyle_exercise/model/ownExercise.dart';
 
 class FirestoreService {
-  // Create a CollectionReference called bookCollection that references
+  // Create a CollectionReference called ownExerciseCollection that references
   // the firestore collection
   final CollectionReference ownExerciseCollection =
       FirebaseFirestore.instance.collection('ownExercises');

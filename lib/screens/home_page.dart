@@ -77,28 +77,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 } //HomePageState
-
-Widget openBottomDrawer() {
-  return Drawer(
-    child: Column(
-      children: <Widget>[
-        //Add menu item to edit
-        ListTile(
-          leading: const Icon(Icons.mode_edit),
-          title: const Text('Edit'),
-          onTap: () {
-            print('Edit tapped..');
-          },
-        ),
-        ListTile(
-          //Add menu item to add
-          leading: const Icon(Icons.add),
-          title: const Text('Add'),
-          onTap: () {
-            print('Add tapped..');
-          },
-        ),
-      ],
-    ),
-  );
-}
